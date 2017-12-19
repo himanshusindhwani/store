@@ -1,0 +1,26 @@
+<a href="#/products">Go Back</a>
+<div class="panel panel-default" ng-init="getProduct()">
+  <div class="panel-heading">
+    <h3 class="panel-title">{{product.name}}</h3>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-4">
+        <img src="{{product.image_url}}">
+      </div>
+      <div class="col-md-8">
+        </p>{{product.description}}</p>
+        <ul class="list-group">
+          <li class="list-group-item">Category: {{product.category}}</li>
+          <li class="list-group-item">Seller: {{product.seller}}</li>
+          <li class="list-group-item">Number: {{product.pages}}</li>
+        </ul>
+        <a target="_blank" href="{{product.buy_url}}" class="btn btn-primary">Buy</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="pull-right">
+  <a href="#/products/edit/{{product._id}}">Edit</a> |  <a href="#" ng-click="removeProduct(product._id)">Delete</a>
+  </div>
